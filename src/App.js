@@ -9,13 +9,9 @@
 // Importing Required Libraries
 
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Switch } from "react-router-dom";
 import Footer from "./Footer";
 import {
-  Nav,
   Button,
   Badge,
   Container,

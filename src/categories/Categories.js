@@ -19,14 +19,8 @@ import Astronomy from "./Astronomy";
 import Geography from "./Geography";
 import History from "./History";
 import Footer from "../Footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faVrCardboard,
-  faPlus,
-  faGraduationCap
-} from "@fortawesome/free-solid-svg-icons";
 
-import { Button, Badge, Container, Row, Col, Jumbotron } from "react-bootstrap";
+import { Badge, Container, Row, Col, Jumbotron } from "react-bootstrap";
 
 //Categories class is an exported component with 3 major components being called in them.
 export default class Categories extends React.Component {
