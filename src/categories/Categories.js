@@ -15,6 +15,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Card from "card-vibes";
+import Table from 'react-bootstrap/Table'
+
 import Astronomy from "./Astronomy";
 import Geography from "./Geography";
 import History from "./History";
@@ -31,24 +33,26 @@ export default class Categories extends React.Component {
           <Badge variant="info">
             <h1>EducationalVR</h1>
           </Badge>
-          <h6>Learning in Virtual Reality</h6>
           <Container>
             <Row className="headerTopPad30">
               <Col xs={12}>
-                <h5>
-                  <b>Before Your Proceed,</b>
+                <h5>Before You Proceed,
                 </h5>
-                <h6>
+                <Table className="justifyText">
+                  <thead>
+                  <tr>
                   1. For the Optimal Experience, It is recommended to access
-                  this website on a <b>Desktop PC / Laptop / Tablet</b>. <br />{" "}
-                  <br />
-                  2. On Smartphone, It is recommended to be accessed on{" "}
-                  <b>Google Chrome browser.</b>
-                  <br /> <br />
-                  3. All the major VR Headsets like HTC Vive, Oculus Rift,
-                  Oculus Go, Google Daydream / Cardboard, Samsung GearVR, Vive
+                  this website on a <b>Desktop PC / Laptop / Tablet.</b>
+                  </tr>
+                  <tr>
+                  2. On Smartphone, It is recommended to be accessed on <b>Mozilla Firefox browser.</b>
+                  </tr>
+                  <tr>
+                  3. All kinds of VR Headsets are supported such as like HTC Vive, Oculus Rift/Go, Daydream/Cardboard etc.
                   Focus.
-                </h6>
+                  </tr>
+                  </thead>
+                </Table>
               </Col>
             </Row>
           </Container>

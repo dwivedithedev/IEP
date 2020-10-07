@@ -16,10 +16,11 @@ import Spinner from "react-bootstrap/Spinner";
 export default class Footer extends Component {
   render() {
     return (
-      <div className="App footer">
+      <div className="p4 App footer">
+        <hr/>
         <h6 className="noTextDec">
-          <Spinner animation="grow" size="sm" variant="info" /> Project by
-          Vaibhav Dwivedi | <Link to="/">EducationalVR</Link>
+        <Link to="/">EducationalVR</Link> | Project by
+          Vaibhav Dwivedi. <Spinner animation="grow" size="sm" variant="info" />
         </h6>
       </div>
     );

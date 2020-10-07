@@ -35,6 +35,7 @@ var iconStyle = {
   paddingRight: "5px"
 };
 
+
 //App is the main component of our web application
 export default class App extends React.Component {
   render() {
@@ -46,10 +47,9 @@ export default class App extends React.Component {
               <Badge variant="info">
                 <h1>EducationalVR</h1>
               </Badge>
-              <h6>Learning in Virtual Reality</h6>
               <Container>
-                <Row className="headerTopPad30">
-                  <Col xs={12}>
+                <Row>
+                  <Col className="headerTB30" xs={12}>
                     <FontAwesomeIcon
                       style={iconStyle}
                       icon={faVrCardboard}
@@ -59,19 +59,19 @@ export default class App extends React.Component {
                     <FontAwesomeIcon icon={faGraduationCap} size="5x" />
                   </Col>
                   <Col xs={12}>
-                    <p>
+                    <h4>
                       EducationalVR is a platform made for people to understand
                       and study different and various fields of subjects by
                       experiencing them in Virtual Reality.
-                    </p>
+                    </h4>
                   </Col>
                 </Row>
                 <Row>
                   <Col>
                     <div className="header">
                       <Link to="/categories">
-                        <Button size="lg" variant="info" block>
-                          View All Categories
+                        <Button size="lg" variant="info">
+                          Start Learning
                         </Button>
                       </Link>
                     </div>

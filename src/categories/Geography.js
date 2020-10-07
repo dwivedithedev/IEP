@@ -68,10 +68,6 @@ export default class Geography extends React.Component {
             A VR Headset is recommended for best and full experience, to
             understand concepts better.
           </p>
-          <hr />
-          <div className="mb-0">
-            <h4>Select Your Lesson:- </h4>
-          </div>
         </Alert>
         <Container>
           <Row>
@@ -121,21 +117,6 @@ export default class Geography extends React.Component {
               </Card>
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <div className="header">
-                <Button
-                  id="myEnterVRButton"
-                  href="#"
-                  size="lg"
-                  variant="info"
-                  block
-                >
-                  LAUNCH EXPERIENCE
-                </Button>
-              </div>
-            </Col>
-          </Row>
         </Container>
 
         {/*Below code is for Aframe WebVR Scene */}
@@ -145,7 +126,7 @@ export default class Geography extends React.Component {
             <hr />
             <Container>
               <Row>
-                <Col md="auto" xl={{ span: 8, offset: 2 }}>
+                <Col>
                   <div id="myEmbeddedScene">
                     <Scene
                       vr-mode-ui="enterVRButton: #myEnterVRButton"
@@ -182,6 +163,20 @@ export default class Geography extends React.Component {
               </Row>
             </Container>
           </Card.Body>
+          <Row>
+            <Col>
+              <div className="header">
+                <Button
+                  id="myEnterVRButton"
+                  href="#"
+                  size="lg"
+                  variant="primary"
+                >
+                  LAUNCH EXPERIENCE
+                </Button>
+              </div>
+            </Col>
+          </Row>
         </Card>
       </div>
     );

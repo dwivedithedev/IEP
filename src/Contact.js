@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
       let query = document.getElementById("formGroupContent").value;
       console.log("Name - " + name + ", email -" + email + " query - " + query);
       let pushEmail =
-        "mailto:vaibhavforeverpr@gmail.com?body=" +
+        "mailto:vaibhavdwivedi.19.msc@ishls.indusuni.ac.in?body=" +
         query +
         "&subject= Query by " +
         name +
@@ -66,13 +66,15 @@ export default class Contact extends React.Component {
           <Container>
             <Row className="headerTopPad30">
               <Col xs={12}>
-                <h6>
+                <h5>
                   <b>Contact Us</b>
-                </h6>
-                <p>
+                </h5>
+                <div>
+                <h4>
                   Please use the below form to submit bug reports, queries,
                   suggestions or to reach out to us.
-                </p>
+                </h4>
+                </div>
               </Col>
             </Row>
           </Container>

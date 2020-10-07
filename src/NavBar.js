@@ -24,16 +24,17 @@ import About from "./About";
 import Contact from "./Contact";
 import Categories from "./categories/Categories";
 
-import { createBrowserHistory } from "history";
-const history = createBrowserHistory();
+//import { createBrowserHistory } from "history";
+//const history = createBrowserHistory();
+// this was attribute in <Router history={history}>
 
 //NavBar class is an exported component which provides navigation
 export default class NavBar extends Component {
   render() {
     return (
-      <Router history={history}>
+      <Router >
         <div>
-          <Nav className="justify-content-end">
+          <Nav className="justify-content-center">
             <Nav.Item as="li">
               <Nav.Link>
                 <Link to="/">Home</Link>

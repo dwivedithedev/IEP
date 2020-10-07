@@ -33,7 +33,9 @@ export default class History extends React.Component {
       preset: "japan",
       skyType: "none",
       dressingAmount: "10",
-      valueText: "About the Environment"
+      valueText: "About the Environment",
+      leftBoardText: "Information will load here.",
+      rightBoardText: "Information will load here."
     };
   }
 
@@ -42,8 +44,10 @@ export default class History extends React.Component {
       preset: "japan",
       skyType: "atmosphere",
       valueText:
-        "The structures around you represent the Itsukushima Shrine in Japan which is a Shinto shrine on the island of Itsukushima, best known for its torii gate. It is in the city of Hatsukaichi in Hiroshima Prefecture in Japan. Itsukushima Shrine was registered on UNESCO's World Cultural Heritage list in December 1996."
-    });
+        "The structures around you represent the Itsukushima Shrine in Japan which is a Shinto shrine on the island of Itsukushima, best known for its torii gate.",
+        leftBoardText: "It is in the city of Hatsukaichi in Hiroshima Prefecture in Japan.",
+        rightBoardText: "Itsukushima Shrine was registered on UNESCO's World Cultural Heritage list in December 1996."
+      });
   }
 
   toEgypt() {
@@ -51,8 +55,10 @@ export default class History extends React.Component {
       preset: "egypt",
       skyType: "atmosphere",
       valueText:
-        "The Egyptian pyramids are ancient pyramid-shaped masonry structures located in Egypt. As of November 2008, sources cite either 118 or 138 as the number of identified Egyptian pyramids. Most were built as tombs for the country's pharaohs and their consorts during the Old and Middle Kingdom periods."
-    });
+        "The Egyptian pyramids are ancient pyramid-shaped masonry structures located in Egypt."
+      ,leftBoardText: "As of Nov. 2008, We have 118-138 total no. of identified Egyptian pyramids.",
+      rightBoardText: " Most were built as tombs for the Pharaohs during the Old and Middle Kingdom periods."
+      });
   }
 
   render() {
@@ -65,10 +71,6 @@ export default class History extends React.Component {
             A VR Headset is recommended for best and full experience, to
             understand concepts better.
           </p>
-          <hr />
-          <div className="mb-0">
-            <h4>Select Your Lesson:- </h4>
-          </div>
         </Alert>
         <Container>
           <Row>
@@ -101,21 +103,6 @@ export default class History extends React.Component {
               </Card>
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <div className="header">
-                <Button
-                  id="myEnterVRButton"
-                  href="#"
-                  size="lg"
-                  variant="info"
-                  block
-                >
-                  LAUNCH EXPERIENCE
-                </Button>
-              </div>
-            </Col>
-          </Row>
         </Container>
 
         {/*Below code is for Aframe WebVR Scene */}
@@ -125,7 +112,7 @@ export default class History extends React.Component {
             <hr />
             <Container>
               <Row>
-                <Col md="auto" xl={{ span: 8, offset: 2 }}>
+                <Col>
                   <div id="myEmbeddedScene">
                     <Scene
                       vr-mode-ui="enterVRButton: #myEnterVRButton"
@@ -140,6 +127,7 @@ export default class History extends React.Component {
                         }}
                       />
                       <Entity primitive="a-sky" color="#6EBAA7" />
+
                       <Entity
                         text={{
                           value: this.state.valueText,
@@ -158,12 +146,68 @@ export default class History extends React.Component {
                         position={{ x: 0.0, y: 0.949, z: -10.0 }}
                         rotation="0 0 -90"
                       />
+
+                      {/* left board text */}
+                      <Entity
+                        text={{
+                          value: this.state.leftBoardText,
+                          side: "double",
+                          align: "center",
+                          tabSize: 3.99
+                        }}
+                        scale="12 12 12"
+                        position={{ x: -10.0, y: 1.749, z: 10.0 }}
+                        rotation="0 90 0"
+                      />
+                      <Entity
+                        primitive="a-plane"
+                        color="#696969"
+                        height="15"
+                        width="5"
+                        position={{ x: -10.0, y: 0.949, z: 10.0 }}
+                        rotation="0 90 -90"
+                      />
+
+                      {/* Right board text */}
+                      <Entity
+                        text={{
+                          value: this.state.rightBoardText,
+                          side: "double",
+                          align: "center",
+                          tabSize: 3.99
+                        }}
+                        scale="12 12 12"
+                        position={{ x: 10.0, y: 1.749, z: 16.0 }}
+                        rotation="0 -90 0"
+                      />
+                      <Entity
+                        primitive="a-plane"
+                        color="#696969"
+                        height="15"
+                        width="5"
+                        position={{ x: 10.0, y: 0.949, z: 16.0 }}
+                        rotation="0 -90 90"
+                      />
                     </Scene>
                   </div>
                 </Col>
               </Row>
             </Container>
           </Card.Body>
+        <Row>
+            <Col>
+              <div className="header">
+                <Button
+                  id="myEnterVRButton"
+                  href="#"
+                  size="lg"
+                  variant="primary"
+                >
+                  LAUNCH EXPERIENCE
+                </Button>
+              </div>
+            </Col>
+          </Row>
         </Card>
       </div>
     );

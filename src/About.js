@@ -26,20 +26,20 @@ export default class About extends React.Component {
           <Container>
             <Row className="headerTopPad30">
               <Col xs={12}>
-                <h6>
+                <h5>
                   <b>About The Project</b>
-                </h6>
-                <p>
-                  In this project of EducationalVR, The objective is to make a
-                  platform (as in a web application) to help people learn and
-                  understand and more importantly experience complex topics in
-                  different subjects with the help of virtual reality. The main
-                  goal is aimed to make complex topics, easier to understand and
-                  effective for learning for the students and easier to be
-                  taught by teachers as well. This will help in retaining the
-                  concepts in student's mind in a better manner so that they can
+                </h5>
+                <div class="justifyText">
+                <h4>
+                  In this project of Interactive Education Platform, The objective is to make a
+                  platform (as in a web application) to help children learn and
+                  understand and more importantly <b>experience</b> complex topics in
+                  different subjects with the help of new technologies such as AR, VR and 3D. 
+                  <br/>
+                  This will help in retaining the concepts in student's mind in a better manner so that they can
                   perform better in further education.
-                </p>
+                </h4>
+                </div>
               </Col>
             </Row>
           </Container>
